@@ -505,3 +505,268 @@ footer ul li a:hover{
         justify-content: center;
     }
 }
+
+
+
+/* Contact CSS */
+.contact__container{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+}
+.contact__aside{
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+.aside__image{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+.contact__aside h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.contact__aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.contact__details li{
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.social__icons{
+    margin-top: 2rem;
+}
+.contact__socials{
+    display: flex;
+    gap: 0.8rem;
+}
+.contact__socials a{
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+.contact__socials a:hover{
+    background: transparent;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.form__name{
+    display: flex;
+    gap: 1.2rem;
+}
+form input[type="text"]{
+    width: 50%;
+}
+input,textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+form .btn{
+    width: max-content;
+    margin-top: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*-----------MEDIA QUERIES (TABLET)-------------*/
+@media screen and (max-width: 1024px) {
+    .contact{
+        padding-bottom: 0;
+    }
+    .contact__container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .contact__aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    form{
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+/*-----------MEDIA QUERIES (Phones)-------------*/
+@media screen and (max-width: 600px) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+    form {
+        margin: 0 1.5rem 3rem;
+    }
+    .form__name {
+        flex-direction: column;
+    }
+    .form__name input[type="text"] {
+        width: 100%;
+    }
+}
+
+
+
+/* About CSS */
+.about__achievements{
+    margin-top: 3rem;
+}
+.about__achievements-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.about__achievements-right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+.achievements__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.achievement__card{
+    background-color: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.achievement__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.achievement__icon {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+.achievement__card:nth-child(2) .achievement__icon {
+    background: var(--color-success);
+}
+.achievement__card:nth-child(3)     .achievement__icon {
+background: var(--color-primary);
+}
+.achievement__card p{
+    margin-top: 1rem;
+}
+
+/*===============TEAM=============*/
+
+.team{
+    background: var(--color-bg1);
+        box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.team__member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+.team__member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+    transition: var(--transition);
+}
+.team__member-img img{
+    filter: saturate(0);
+}
+.team__member:hover img{
+    filter: saturate(1);
+}
+.team__member-info{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team__member-info p{
+    color: var(--color-light);
+}
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+}
+.team__member:hover 
+.team__member-socials{
+    right: 0%;
+    transition: var(--transition);
+}
+.team__member-socials a{
+    padding: 1rem;
+}
+
+/*------------MEDIA QUERIES(TABLETS)---------*/
+@media screen and (max-width: 1024px) {
+    .about__achievements{
+        margin-top: 2rem;
+    }
+    .about__achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about__achievements-left{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .team__container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+    .team__member{
+        padding: 1rem;
+    }
+
+}
+
+/*------------MEDIA QUERIES(TABLETS)---------*/
+@media screen and (max-width: 600px) {
+    .achievements__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team__member{
+        padding: 0;
+    }
+    .team__member p{
+        margin-bottom: 1.5rem;
+    }
+}
